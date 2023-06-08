@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-REPO="signalapp/signal-desktop"
+REPO="$1"
 VERSION=$(./get-latest.sh)
 
 echo Downloading version: $VERSION $(pwd)

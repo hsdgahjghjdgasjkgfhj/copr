@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-REPO="signalapp/signal-desktop"
+REPO=$1
 GITHUB_API_VERSION="2022-11-28"
 
 curl -sL  \
