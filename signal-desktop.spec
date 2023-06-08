@@ -1,4 +1,4 @@
-%define version %(/workdir/copr/get-latest.sh | cut -c2-)
+%define version __VERSION__
 
 Name:		signal-desktop
 Version:	%{version}
