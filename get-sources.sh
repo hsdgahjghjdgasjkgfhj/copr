@@ -1,7 +1,7 @@
 #!/bin/env sh
 
 REPO="$1"
-VERSION=$(./get-latest.sh)
+VERSION=$(./get-latest.sh $1)
 
 echo Downloading version: $VERSION $(pwd)
 
