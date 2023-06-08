@@ -3,7 +3,7 @@
 REPO="signalapp/signal-desktop"
 VERSION=$(./get-latest.sh)
 
-echo Downloading version: $VERSION
+echo Downloading version: $VERSION $(pwd)
 
 mkdir SOURCES
 
