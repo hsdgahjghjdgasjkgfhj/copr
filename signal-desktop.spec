@@ -11,6 +11,29 @@ Source0:	https://github.com/signalapp/Signal-Desktop/archive/v%{version}.tar.gz
 
 BuildRequires: binutils, git, python2, gcc, gcc-c++, openssl-devel, bsdtar, jq, zlib, xz, nodejs, ca-certificates, git-lfs
 
+%if 0%{?fedora} > 28
+BuildRequires: python-unversioned-command
+%endif
+%if 0%{?fedora} > 29
+BuildRequires: libxcrypt-compat
+%endif
+%if 0%{?fedora} > 31
+BuildRequires: libxcrypt-compat, vips-devel
+%endif
+%if 0%{?el8}
+BuildRequires: platform-python-devel, python3
+%endif
+
+%if 0%{?fedora} > 31
+BuildRequires: yarnpkg
+%else
+BuildRequires: yarn 
+%endif
+
+%if 0%{?fedora} > 35
+BuildRequires: npm 
+%endif
+
 %if 0%{?fedora} > 35
 BuildRequires: npm 
 %endif
