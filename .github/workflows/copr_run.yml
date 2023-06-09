@@ -18,7 +18,7 @@ jobs:
 
       # Install rpm and copr tools
       - name: Install tooling for source RPM build
-        run: dnf -y install copr-cli
+        run: dnf -y install copr-cli jq
         
       - name: Start build  
         env:
