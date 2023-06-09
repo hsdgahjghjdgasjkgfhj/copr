@@ -1,0 +1,40 @@
+name: Reminder
+on:
+  schedule:
+    - cron: "18 0 0 0 0"
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    # Looks there are no or not many native fedora-runners, hence we use a container
+    container: fedora:latest
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # That workspace (the directory) is different from the RPMBUILD space
+      - uses: actions/checkout@v3
+
+      # Install rpm and copr tools
+      - name: Install tooling for source RPM build
+        run: dnf -y install copr-cli
+        
+      - name: Start build  
+        env:
+          API_TOKEN_CONTENT: ${{ secrets.COPR_API_TOKEN }}
+        run: |
+           mkdir -p "$HOME/.config"
+           echo "$API_TOKEN_CONTENT" > "$HOME/.config/copr"
+           copr-cli build-package --name signal-desktop signal-desktop
+
+
+
+
+
