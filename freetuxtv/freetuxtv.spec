@@ -9,7 +9,7 @@ URL:		https://github.com/freetuxtv/freetuxtv
 
 Source0:	https://github.com/freetuxtv/freetuxtv/archive/freetuxtv-%{version}.tar.gz
 
-BuildRequires: git gcc autoconf automake make gettext gtk3-devel vlc vlc-devel sqlite-devel libcurl-devel libnotify-devel intltool dbus-glib libtool
+BuildRequires: git gcc autoconf automake make gettext gtk3-devel vlc vlc-devel sqlite-devel libcurl-devel libnotify-devel intltool dbus-glib-devel libtool dbus-glib-devel
 
 Provides: freetuxtv
 Requires: gtk3 glib libsqlite3x vlc libcurl libnotify
