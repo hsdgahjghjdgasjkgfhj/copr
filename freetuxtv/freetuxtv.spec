@@ -34,7 +34,7 @@ echo $SOURCE_DATE_EPOCH
 
 cd %{_builddir}/freetuxtv-freetuxtv-%{version} 
 
-./autogen.sh --prefix=%{buildroot}/usr
+./autogen.sh --prefix=usr
 
 %install
 cd %{_builddir}/freetuxtv-freetuxtv-%{version}
