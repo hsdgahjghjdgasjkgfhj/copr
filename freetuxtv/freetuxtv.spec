@@ -63,8 +63,8 @@ done
 %files
 %defattr(-,root,root)
 %{_bindir}/*
-/usr/lib/*
-/usr/include/*
+usr/lib/*
+usr/include/*
 %{_datadir}/*
 
 %Changelog
