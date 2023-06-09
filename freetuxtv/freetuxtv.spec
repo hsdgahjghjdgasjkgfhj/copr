@@ -57,7 +57,7 @@ EOF
 
 for i in 16 22 32 48 64 128; do
     install -dm755 %{buildroot}%{_datadir}/icons/hicolor/${i}x${i}/apps/
-    install -Dm 644 %{_builddir}/freetuxtv-%{version}/data/icons/hicolor_apps_${i}x${i}_freetuxtv.png  %{buildroot}%{_datadir}/icons/hicolor/${i}x${i}/apps/%{name}.png
+    install -Dm 644 %{_builddir}/freetuxtv-freetuxtv-%{version}/data/icons/hicolor_apps_${i}x${i}_freetuxtv.png  %{buildroot}%{_datadir}/icons/hicolor/${i}x${i}/apps/%{name}.png
 done
 
 %files
