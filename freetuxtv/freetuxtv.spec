@@ -64,8 +64,8 @@ done
 %files
 %defattr(-,root,root)
 %{_bindir}/*
-usr/lib/*
-usr/include/*
+%{buildroot}/usr/lib/*
+%{buildroot}/usr/include/*
 %{_datadir}/*
 
 %Changelog
