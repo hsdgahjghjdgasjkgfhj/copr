@@ -1,7 +1,7 @@
 name: Reminder
 on:
   schedule:
-    - cron: "18 0 0 0 0"
+    - cron: "18 * * * *"
 
 
   # Allows you to run this workflow manually from the Actions tab
