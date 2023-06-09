@@ -63,7 +63,7 @@ done
 %files
 %defattr(-,root,root)
 %{_bindir}/*
-%{buildroot}/usr/lib/*
+%{_libdir}/*
 
 %Changelog
 
