@@ -64,7 +64,6 @@ done
 %defattr(-,root,root)
 %{_bindir}/*
 %{buildroot}/usr/lib/*
-%{buildroot}/usr/include/*
 %{buildroot}/usr/share/*
 
 %Changelog
