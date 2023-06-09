@@ -25,19 +25,19 @@ FreetuxTV is a Linux media player based on GTK+ and LibVLC for watching and reco
 export SOURCE_DATE_EPOCH="$(date +"%s")"
 tar xfz %{S:0}
 pwd
-cd freetuxtv-%{version}
+cd freetuxtv-freetuxtv-%{version}
 
 %build
 # https://bugzilla.redhat.com/show_bug.cgi?id=1793722
 export SOURCE_DATE_EPOCH="$(date +"%s")"
 echo $SOURCE_DATE_EPOCH
 
-cd %{_builddir}/freetuxtv-%{version} 
+cd %{_builddir}/freetuxtv-freetuxtv-%{version} 
 
 ./autogen.sh --prefix=%{buildroot}/usr
 
 %install
-cd %{_builddir}/freetuxtv-%{version}
+cd %{_builddir}/freetuxtv-freetuxtv-%{version}
 
 make
 make install 
