@@ -64,7 +64,7 @@ done
 %defattr(-,root,root)
 %{_bindir}/*
 %{_libdir}/*
-
+%{_datadir}/*
 %Changelog
 
 * Wed Apr 26 2023 test   %{version}
